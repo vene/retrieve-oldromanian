@@ -5,6 +5,7 @@ import org.apache.lucene.document._
 import org.apache.lucene.store.RAMDirectory
 import org.apache.lucene.util.Version
 import org.apache.lucene.analysis.ro.RomanianAnalyzer
+import org.apache.lucene.analysis.standard.StandardAnalyzer
 
 object IndexBuilder {
 	val prefix = "data/"
@@ -22,7 +23,7 @@ object IndexBuilder {
 				val doc = new Document
 				doc add new Field("title", title, Field.Store.YES, 
 							      Field.Index.NO)
-        	    doc add new Field("content", file, Field.Store.YES, 
+        	    doc add new Field("content", file, Field.Store.NO, 
         	    	              Field.Index.ANALYZED, Field.TermVector.YES)
 				writer.addDocument(doc)
 			}

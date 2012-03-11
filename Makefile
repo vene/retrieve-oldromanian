@@ -14,3 +14,6 @@ clean-all: clean clean-data
 
 jar:
 	${SBT} package
+
+run:
+	JAVA_OPTS=-Dfile.encoding=utf8 ${SBT} run
