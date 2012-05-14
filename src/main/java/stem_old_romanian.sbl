@@ -1,6 +1,6 @@
 
 routines (
-           prelude postlude mark_regions
+           prelude postlude mark_regions remove_doubles
            RV R1 R2
            step_0
            standard_suffix combo_suffix
@@ -62,6 +62,10 @@ define postlude as repeat (
         ''   (next)
     )
 
+)
+
+define remove_doubles as (
+    repeat goto ('i'['i'] delete)
 )
 
 backwardmode (
@@ -226,6 +230,7 @@ backwardmode (
 )
 
 define stem as (
+    do remove_doubles
     do prelude
     do mark_regions
     backwards (

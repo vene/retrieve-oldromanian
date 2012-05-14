@@ -15,6 +15,13 @@ class TestStemmer extends FunSuite {
         for (word <- test_words) checkWordStem(word, "ungur")
     }
 
+    test("Double i in proper names") {
+        checkWordStem("Iustinian", "iustinian")
+        checkWordStem("Iustiniian", "iustinian")
+        checkWordStem("Italiia", "ital")
+        checkWordStem("Italia", "ital")
+    }
+
     test("Romanian stems from the example page") {
         val words = Array("abruptă", "absent", "absentă", "absente", "absenţa",
                       "absenţă", "absenţi", "absolut", "absoluta", "absolută",

@@ -604,6 +604,55 @@ private static final long serialVersionUID = 1L;
                     return true;
                 }
 
+                private boolean r_remove_doubles() {
+            int v_1;
+            int v_2;
+                    // (, line 67
+                    // repeat, line 68
+                    replab0: while(true)
+                    {
+                        v_1 = cursor;
+                        lab1: do {
+                            // goto, line 68
+                            golab2: while(true)
+                            {
+                                v_2 = cursor;
+                                lab3: do {
+                                    // (, line 68
+                                    // literal, line 68
+                                    if (!(eq_s(1, "i")))
+                                    {
+                                        break lab3;
+                                    }
+                                    // [, line 68
+                                    bra = cursor;
+                                    // literal, line 68
+                                    if (!(eq_s(1, "i")))
+                                    {
+                                        break lab3;
+                                    }
+                                    // ], line 68
+                                    ket = cursor;
+                                    // delete, line 68
+                                    slice_del();
+                                    cursor = v_2;
+                                    break golab2;
+                                } while (false);
+                                cursor = v_2;
+                                if (cursor >= limit)
+                                {
+                                    break lab1;
+                                }
+                                cursor++;
+                            }
+                            continue replab0;
+                        } while (false);
+                        cursor = v_1;
+                        break replab0;
+                    }
+                    return true;
+                }
+
                 private boolean r_RV() {
                     if (!(I_pV <= cursor))
                     {
@@ -631,18 +680,18 @@ private static final long serialVersionUID = 1L;
                 private boolean r_step_0() {
             int among_var;
             int v_1;
-                    // (, line 73
-                    // [, line 74
+                    // (, line 77
+                    // [, line 78
                     ket = cursor;
-                    // substring, line 74
+                    // substring, line 78
                     among_var = find_among_b(a_1, 17);
                     if (among_var == 0)
                     {
                         return false;
                     }
-                    // ], line 74
+                    // ], line 78
                     bra = cursor;
-                    // call R1, line 74
+                    // call R1, line 78
                     if (!r_R1())
                     {
                         return false;
@@ -651,37 +700,37 @@ private static final long serialVersionUID = 1L;
                         case 0:
                             return false;
                         case 1:
-                            // (, line 76
-                            // delete, line 76
+                            // (, line 80
+                            // delete, line 80
                             slice_del();
                             break;
                         case 2:
-                            // (, line 78
-                            // delete, line 78
+                            // (, line 82
+                            // delete, line 82
                             slice_del();
                             break;
                         case 3:
-                            // (, line 80
-                            // <-, line 80
+                            // (, line 84
+                            // <-, line 84
                             slice_from("a");
                             break;
                         case 4:
-                            // (, line 82
-                            // <-, line 82
+                            // (, line 86
+                            // <-, line 86
                             slice_from("e");
                             break;
                         case 5:
-                            // (, line 84
-                            // <-, line 84
+                            // (, line 88
+                            // <-, line 88
                             slice_from("i");
                             break;
                         case 6:
-                            // (, line 86
-                            // not, line 86
+                            // (, line 90
+                            // not, line 90
                             {
                                 v_1 = limit - cursor;
                                 lab0: do {
-                                    // literal, line 86
+                                    // literal, line 90
                                     if (!(eq_s_b(2, "ab")))
                                     {
                                         break lab0;
@@ -690,17 +739,17 @@ private static final long serialVersionUID = 1L;
                                 } while (false);
                                 cursor = limit - v_1;
                             }
-                            // <-, line 86
+                            // <-, line 90
                             slice_from("i");
                             break;
                         case 7:
-                            // (, line 88
-                            // <-, line 88
+                            // (, line 92
+                            // <-, line 92
                             slice_from("at");
                             break;
                         case 8:
-                            // (, line 90
-                            // <-, line 90
+                            // (, line 94
+                            // <-, line 94
                             slice_from("a\u0163i");
                             break;
                     }
@@ -710,60 +759,60 @@ private static final long serialVersionUID = 1L;
                 private boolean r_combo_suffix() {
             int among_var;
             int v_1;
-                    // test, line 94
+                    // test, line 98
                     v_1 = limit - cursor;
-                    // (, line 94
-                    // [, line 95
+                    // (, line 98
+                    // [, line 99
                     ket = cursor;
-                    // substring, line 95
+                    // substring, line 99
                     among_var = find_among_b(a_2, 46);
                     if (among_var == 0)
                     {
                         return false;
                     }
-                    // ], line 95
+                    // ], line 99
                     bra = cursor;
-                    // call R1, line 95
+                    // call R1, line 99
                     if (!r_R1())
                     {
                         return false;
                     }
-                    // (, line 95
+                    // (, line 99
                     switch(among_var) {
                         case 0:
                             return false;
                         case 1:
-                            // (, line 103
-                            // <-, line 104
+                            // (, line 107
+                            // <-, line 108
                             slice_from("abil");
                             break;
                         case 2:
-                            // (, line 106
-                            // <-, line 107
+                            // (, line 110
+                            // <-, line 111
                             slice_from("ibil");
                             break;
                         case 3:
-                            // (, line 109
-                            // <-, line 110
+                            // (, line 113
+                            // <-, line 114
                             slice_from("iv");
                             break;
                         case 4:
-                            // (, line 115
-                            // <-, line 116
+                            // (, line 119
+                            // <-, line 120
                             slice_from("ic");
                             break;
                         case 5:
-                            // (, line 120
-                            // <-, line 121
+                            // (, line 124
+                            // <-, line 125
                             slice_from("at");
                             break;
                         case 6:
-                            // (, line 124
-                            // <-, line 125
+                            // (, line 128
+                            // <-, line 129
                             slice_from("it");
                             break;
                     }
-                    // set standard_suffix_removed, line 128
+                    // set standard_suffix_removed, line 132
                     B_standard_suffix_removed = true;
                     cursor = limit - v_1;
                     return true;
@@ -772,15 +821,15 @@ private static final long serialVersionUID = 1L;
                 private boolean r_standard_suffix() {
             int among_var;
             int v_1;
-                    // (, line 132
-                    // unset standard_suffix_removed, line 133
+                    // (, line 136
+                    // unset standard_suffix_removed, line 137
                     B_standard_suffix_removed = false;
-                    // repeat, line 134
+                    // repeat, line 138
                     replab0: while(true)
                     {
                         v_1 = limit - cursor;
                         lab1: do {
-                            // call combo_suffix, line 134
+                            // call combo_suffix, line 138
                             if (!r_combo_suffix())
                             {
                                 break lab1;
@@ -790,49 +839,49 @@ private static final long serialVersionUID = 1L;
                         cursor = limit - v_1;
                         break replab0;
                     }
-                    // [, line 135
+                    // [, line 139
                     ket = cursor;
-                    // substring, line 135
+                    // substring, line 139
                     among_var = find_among_b(a_3, 62);
                     if (among_var == 0)
                     {
                         return false;
                     }
-                    // ], line 135
+                    // ], line 139
                     bra = cursor;
-                    // call R2, line 135
+                    // call R2, line 139
                     if (!r_R2())
                     {
                         return false;
                     }
-                    // (, line 135
+                    // (, line 139
                     switch(among_var) {
                         case 0:
                             return false;
                         case 1:
-                            // (, line 151
-                            // delete, line 152
+                            // (, line 155
+                            // delete, line 156
                             slice_del();
                             break;
                         case 2:
-                            // (, line 154
-                            // literal, line 155
+                            // (, line 158
+                            // literal, line 159
                             if (!(eq_s_b(1, "\u0163")))
                             {
                                 return false;
                             }
-                            // ], line 155
+                            // ], line 159
                             bra = cursor;
-                            // <-, line 155
+                            // <-, line 159
                             slice_from("t");
                             break;
                         case 3:
-                            // (, line 158
-                            // <-, line 159
+                            // (, line 162
+                            // <-, line 163
                             slice_from("ist");
                             break;
                     }
-                    // set standard_suffix_removed, line 163
+                    // set standard_suffix_removed, line 167
                     B_standard_suffix_removed = true;
                     return true;
                 }
@@ -842,9 +891,9 @@ private static final long serialVersionUID = 1L;
             int v_1;
             int v_2;
             int v_3;
-                    // setlimit, line 167
+                    // setlimit, line 171
                     v_1 = limit - cursor;
-                    // tomark, line 167
+                    // tomark, line 171
                     if (cursor < I_pV)
                     {
                         return false;
@@ -853,25 +902,25 @@ private static final long serialVersionUID = 1L;
                     v_2 = limit_backward;
                     limit_backward = cursor;
                     cursor = limit - v_1;
-                    // (, line 167
-                    // [, line 168
+                    // (, line 171
+                    // [, line 172
                     ket = cursor;
-                    // substring, line 168
+                    // substring, line 172
                     among_var = find_among_b(a_4, 94);
                     if (among_var == 0)
                     {
                         limit_backward = v_2;
                         return false;
                     }
-                    // ], line 168
+                    // ], line 172
                     bra = cursor;
                     switch(among_var) {
                         case 0:
                             limit_backward = v_2;
                             return false;
                         case 1:
-                            // (, line 203
-                            // or, line 203
+                            // (, line 207
+                            // or, line 207
                             lab0: do {
                                 v_3 = limit - cursor;
                                 lab1: do {
@@ -882,19 +931,19 @@ private static final long serialVersionUID = 1L;
                                     break lab0;
                                 } while (false);
                                 cursor = limit - v_3;
-                                // literal, line 203
+                                // literal, line 207
                                 if (!(eq_s_b(1, "u")))
                                 {
                                     limit_backward = v_2;
                                     return false;
                                 }
                             } while (false);
-                            // delete, line 203
+                            // delete, line 207
                             slice_del();
                             break;
                         case 2:
-                            // (, line 217
-                            // delete, line 217
+                            // (, line 221
+                            // delete, line 221
                             slice_del();
                             break;
                     }
@@ -904,18 +953,18 @@ private static final long serialVersionUID = 1L;
 
                 private boolean r_vowel_suffix() {
             int among_var;
-                    // (, line 221
-                    // [, line 222
+                    // (, line 225
+                    // [, line 226
                     ket = cursor;
-                    // substring, line 222
+                    // substring, line 226
                     among_var = find_among_b(a_5, 5);
                     if (among_var == 0)
                     {
                         return false;
                     }
-                    // ], line 222
+                    // ], line 226
                     bra = cursor;
-                    // call RV, line 222
+                    // call RV, line 226
                     if (!r_RV())
                     {
                         return false;
@@ -924,8 +973,8 @@ private static final long serialVersionUID = 1L;
                         case 0:
                             return false;
                         case 1:
-                            // (, line 223
-                            // delete, line 223
+                            // (, line 227
+                            // delete, line 227
                             slice_del();
                             break;
                     }
@@ -941,94 +990,105 @@ private static final long serialVersionUID = 1L;
             int v_6;
             int v_7;
             int v_8;
-                    // (, line 228
-                    // do, line 229
+            int v_9;
+                    // (, line 232
+                    // do, line 233
                     v_1 = cursor;
                     lab0: do {
-                        // call prelude, line 229
-                        if (!r_prelude())
+                        // call remove_doubles, line 233
+                        if (!r_remove_doubles())
                         {
                             break lab0;
                         }
                     } while (false);
                     cursor = v_1;
-                    // do, line 230
+                    // do, line 234
                     v_2 = cursor;
                     lab1: do {
-                        // call mark_regions, line 230
-                        if (!r_mark_regions())
+                        // call prelude, line 234
+                        if (!r_prelude())
                         {
                             break lab1;
                         }
                     } while (false);
                     cursor = v_2;
-                    // backwards, line 231
-                    limit_backward = cursor; cursor = limit;
-                    // (, line 231
-                    // do, line 232
-                    v_3 = limit - cursor;
+                    // do, line 235
+                    v_3 = cursor;
                     lab2: do {
-                        // call step_0, line 232
-                        if (!r_step_0())
+                        // call mark_regions, line 235
+                        if (!r_mark_regions())
                         {
                             break lab2;
                         }
                     } while (false);
-                    cursor = limit - v_3;
-                    // do, line 233
+                    cursor = v_3;
+                    // backwards, line 236
+                    limit_backward = cursor; cursor = limit;
+                    // (, line 236
+                    // do, line 237
                     v_4 = limit - cursor;
                     lab3: do {
-                        // call standard_suffix, line 233
-                        if (!r_standard_suffix())
+                        // call step_0, line 237
+                        if (!r_step_0())
                         {
                             break lab3;
                         }
                     } while (false);
                     cursor = limit - v_4;
-                    // do, line 234
+                    // do, line 238
                     v_5 = limit - cursor;
                     lab4: do {
-                        // (, line 234
-                        // or, line 234
-                        lab5: do {
-                            v_6 = limit - cursor;
-                            lab6: do {
-                                // Boolean test standard_suffix_removed, line 234
+                        // call standard_suffix, line 238
+                        if (!r_standard_suffix())
+                        {
+                            break lab4;
+                        }
+                    } while (false);
+                    cursor = limit - v_5;
+                    // do, line 239
+                    v_6 = limit - cursor;
+                    lab5: do {
+                        // (, line 239
+                        // or, line 239
+                        lab6: do {
+                            v_7 = limit - cursor;
+                            lab7: do {
+                                // Boolean test standard_suffix_removed, line 239
                                 if (!(B_standard_suffix_removed))
                                 {
-                                    break lab6;
+                                    break lab7;
                                 }
-                                break lab5;
+                                break lab6;
                             } while (false);
-                            cursor = limit - v_6;
-                            // call verb_suffix, line 234
+                            cursor = limit - v_7;
+                            // call verb_suffix, line 239
                             if (!r_verb_suffix())
                             {
-                                break lab4;
+                                break lab5;
                             }
                         } while (false);
                     } while (false);
-                    cursor = limit - v_5;
-                    // do, line 235
-                    v_7 = limit - cursor;
-                    lab7: do {
-                        // call vowel_suffix, line 235
-                        if (!r_vowel_suffix())
-                        {
-                            break lab7;
-                        }
-                    } while (false);
-                    cursor = limit - v_7;
-                    cursor = limit_backward;                    // do, line 237
-                    v_8 = cursor;
+                    cursor = limit - v_6;
+                    // do, line 240
+                    v_8 = limit - cursor;
                     lab8: do {
-                        // call postlude, line 237
-                        if (!r_postlude())
+                        // call vowel_suffix, line 240
+                        if (!r_vowel_suffix())
                         {
                             break lab8;
                         }
                     } while (false);
-                    cursor = v_8;
+                    cursor = limit - v_8;
+                    cursor = limit_backward;                    // do, line 242
+                    v_9 = cursor;
+                    lab9: do {
+                        // call postlude, line 242
+                        if (!r_postlude())
+                        {
+                            break lab9;
+                        }
+                    } while (false);
+                    cursor = v_9;
                     return true;
                 }
 
