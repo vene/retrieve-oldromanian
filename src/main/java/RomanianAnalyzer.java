@@ -32,7 +32,7 @@ import org.apache.lucene.analysis.snowball.SnowballFilter;
 import org.apache.lucene.analysis.standard.StandardFilter;
 import org.apache.lucene.analysis.standard.StandardTokenizer;
 import org.apache.lucene.util.Version;
-import org.tartarus.snowball.ext.RomanianStemmer;
+// import org.tartarus.snowball.ext.RomanianStemmer; // use OldRomanianStemmer
 
 /**
  * {@link Analyzer} for Romanian.
@@ -128,7 +128,7 @@ public final class RomanianAnalyzer extends StopwordAnalyzerBase {
     result = new StopFilter(matchVersion, result, stopwords);
     if(!stemExclusionSet.isEmpty())
       result = new KeywordMarkerFilter(result, stemExclusionSet);
-    result = new SnowballFilter(result, new RomanianStemmer());
+    result = new SnowballFilter(result, new OldRomanianStemmer());
 
     result = new ASCIIFoldingFilter(result);
     return new TokenStreamComponents(source, result);
